@@ -31,3 +31,9 @@
 .unknownProperties{
     background-color: #46474c;
 }
+
+#perioticTable{
+    display: grid;
+    grid-template-areas: "H     none3    none    none none none none none none none none none none none none2 none2    none2    none2    none2    He"
+                        "Li     Be      none    none none none none none none none none none none none B    C       N       O       F       Ne";
+}
