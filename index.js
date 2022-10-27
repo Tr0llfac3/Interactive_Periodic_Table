@@ -82,7 +82,7 @@ let elementList = {
     "Rh":{num: 45, abbrev: "Rh", name:"Rhodium", mass: 102.91, type: ElementTypes.TransitionMetals},
     "Pd":{num: 46, abbrev: "Pd", name:"Palladium", mass: 106.42, type: ElementTypes.TransitionMetals},
     "Ag":{num: 47, abbrev: "Ag", name:"Silver", mass: 107.87, type: ElementTypes.TransitionMetals},
-    "Cd":{num: 48, abbrev: "Cd", name:"Cadmium", mass: 112.41, type: ElementTypes.AlkaTransitionMetalsliMetals},
+    "Cd":{num: 48, abbrev: "Cd", name:"Cadmium", mass: 112.41, type: ElementTypes.TransitionMetals},
     "In":{num: 49, abbrev: "In", name:"Indium", mass: 114.82, type: ElementTypes.PostTransitionMetals},
     "Sn":{num: 50, abbrev: "Sn", name:"Tin", mass: 118.71, type: ElementTypes.PostTransitionMetals},
     "Sb":{num: 51, abbrev: "Sb", name:"Antimony", mass: 121.76, type: ElementTypes.Metalloids},
@@ -102,7 +102,7 @@ let elementList = {
     "Pt":{num: 78, abbrev: "Pt", name:"Platinum", mass: 195.08, type: ElementTypes.TransitionMetals},
     "Au":{num: 79, abbrev: "Au", name:"Gold", mass: 196.97, type: ElementTypes.TransitionMetals},
     "Hg":{num: 80, abbrev: "Hg", name:"Mercury", mass: 200.59, type: ElementTypes.TransitionMetals},
-    "Tl":{num: 81, abbrev: "Ti", name:"Thallium", mass: 204.38, type: ElementTypes.PostTransitionMetals},
+    "Tl":{num: 81, abbrev: "Tl", name:"Thallium", mass: 204.38, type: ElementTypes.PostTransitionMetals},
     "Pb":{num: 82, abbrev: "Pb", name:"Lead", mass: 207.20, type: ElementTypes.PostTransitionMetals},
     "Bi":{num: 83, abbrev: "Bi", name:"Bismuth", mass: 208.98, type: ElementTypes.PostTransitionMetals},
     "Po":{num: 84, abbrev: "Po", name:"Polonium", mass: 209, type: ElementTypes.PostTransitionMetals},
@@ -162,12 +162,10 @@ let elementList = {
 }
 
 $.each(elementList, function(i,v){
-    //let key = $(v).data("elem");
     console.log(v);
     let currentElem = v;
-    //console.log(key);
     let elemDiv = `<div class="elementBox ${currentElem.type.class}" style="grid-area: ${currentElem.abbrev}"><p class="elemNum">${currentElem.num}</p>
-    <h1 class="elemAbbr">${currentElem.abbrev}</h1><p class="elemName">${currentElem.name}</p></div>`;
+    <h1 class="elemAbbr">${currentElem.abbrev}</h1></div>`;
     $("#perioticTable").append(elemDiv);
 
 })

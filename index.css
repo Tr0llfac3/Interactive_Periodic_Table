@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+
+body{
+    font-family: Roboto,arial,sans-serif;
+}
 /* Gives the types of elements their color */
 .reactiveNonMetal{
     background-color: #2a4165;
@@ -32,17 +36,37 @@
     background-color: #46474c;
 }
 
-/* Arranges containers to make them look like a periotic table */
+/* Container for the periodic table itself */
 #perioticTable{
     display: grid;
+    /* Arranges The elements to the shape of a periodic table */
     grid-template-areas: 
-    "H none3 none none none none none none none none none none none none none2 none2 none2 none2 none2 He"
-    "Li Be none none none none none none none none none none none none B C N O F Ne"
-    "Na Mg none none none none none none none none none none none none Al Si P S Cl Ar"
-    "K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr"
-    "Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe"
-    "Cs Ba La Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn"
-    "Fr Ra Ac Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og"
-    "none4 none4 Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu"
-    "none4 none4 Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr";
+    "H none3 none none none none none none none none none none none2 none2 none2 none2 none2 He" /* 18 */
+    "Li Be none none none none none none none none none none B C N O F Ne" /* 18 */
+    "Na Mg none none none none none none none none none none Al Si P S Cl Ar" /* 18 */
+    "K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr" /* 18 */
+    "Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe" /* 18 */
+    "Cs Ba La Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn" /* 18 */
+    "Fr Ra Ac Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og" /* 18 */
+    "none4 none4 none4 Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu none5" /* 18 */
+    "none4 none4 none4 Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr none5"; /* 18 */
+    justify-content: start;
+}
+/* So the text aligns with all container */
+#perioticTable h1{
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+.elemNum{
+    margin: 0;
+    font-size: .75em;
+}
+
+/* Sets up every element cell */
+.elementBox{
+    border: 1px solid;
+    width: 60px;
+    height: 60px;
+    padding: 0;
 }
