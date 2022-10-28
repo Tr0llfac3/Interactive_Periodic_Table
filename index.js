@@ -160,7 +160,7 @@ let elementList = {
     "No":{num: 102, abbrev: "No", name:"Nobelium", mass: 259, type: ElementTypes.Actinides},
     "Lr":{num: 103, abbrev: "Lr", name:"Lawrencium", mass: 262, type: ElementTypes.Actinides},
 }
-
+// Adds every cell into the periodic table
 $.each(elementList, function(i,v){
     console.log(v);
     let currentElem = v;
@@ -169,3 +169,7 @@ $.each(elementList, function(i,v){
     $("#perioticTable").append(elemDiv);
 
 })
+
+var myDiv = $('<div class="key">some content</div>');
+$("#perioticTable").append(myDiv);
+$('#periodicTable').append('<div class="spacer"></div>')

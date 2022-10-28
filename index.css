@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 body{
     font-family: Roboto,arial,sans-serif;
 }
@@ -36,20 +35,22 @@ body{
     background-color: #46474c;
 }
 
+
 /* Container for the periodic table itself */
 #perioticTable{
-    display: grid;
+    display: inline-grid;
     /* Arranges The elements to the shape of a periodic table */
     grid-template-areas: 
-    "H none3 none none none none none none none none none none none2 none2 none2 none2 none2 He" /* 18 */
-    "Li Be none none none none none none none none none none B C N O F Ne" /* 18 */
-    "Na Mg none none none none none none none none none none Al Si P S Cl Ar" /* 18 */
+    "H none3 none6 none6 none9 none9 none9 none9 none9 none9 none none none2 none2 none2 none2 none2 He" /* 18 */
+    "Li Be none6 none6 none9 none9 none9 none9 none9 none9 none none B C N O F Ne" /* 18 */
+    "Na Mg none6 none6 none7 none7 none7 none7 none7 none7 none none Al Si P S Cl Ar" /* 18 */
     "K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr" /* 18 */
     "Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe" /* 18 */
     "Cs Ba La Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn" /* 18 */
     "Fr Ra Ac Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og" /* 18 */
     "none4 none4 none4 Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu none5" /* 18 */
-    "none4 none4 none4 Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr none5"; /* 18 */
+    "none4 none4 none4 Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr none5" /* 18 */
+    "none10 key key key key key key key key key key key key key key key key none11"; /* 18 */
     justify-content: start;
 }
 /* So the text aligns with all container */
@@ -69,4 +70,8 @@ body{
     width: 60px;
     height: 60px;
     padding: 0;
+}
+
+.key{
+    grid-area: key;
 }
