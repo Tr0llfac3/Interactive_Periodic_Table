@@ -22,7 +22,7 @@ const ElementTypes = {
     AlkaliMetals: {type: "Alkali Metals", color: "#244d57", class:"alkaliMetals"},
     AlkaliEarthMetals: {type: "Alkali Earth Metals", color: "#622e39", class:"alkalineEarthMetals"},
     TransitionMetals: {type: "Transition Metals", color: "#433c65", class:"transitionMetals"},
-    PostTransitionMetals: {type: "PostTransitionMetals", color: "#2f4d47", class:"postTransitionMetals"},
+    PostTransitionMetals: {type: "Post-Transition Metals", color: "#2f4d47", class:"postTransitionMetals"},
     Metalloids: {type: "Metalloids", color: "#523e1b", class:"metalloids"},
     Lanthanides: {type: "Lanthanides", color: "#004a77", class:"lanthanides"},
     Actinides: {type: "Actinides", color: "#613b28", class:"actinides"},
@@ -170,6 +170,7 @@ $.each(elementList, function(i,v){
 
 })
 
-var myDiv = $('<div class="key">some content</div>');
-$("#perioticTable").append(myDiv);
-$('#periodicTable').append('<div class="spacer"></div>')
+
+//  var myKey = $('<div class="key">some content</div>');
+//  $("#perioticTable").append(myKey);
+

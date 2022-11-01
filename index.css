@@ -49,8 +49,7 @@ body{
     "Cs Ba La Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn" /* 18 */
     "Fr Ra Ac Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og" /* 18 */
     "none4 none4 none4 Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu none5" /* 18 */
-    "none4 none4 none4 Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr none5" /* 18 */
-    "none10 key key key key key key key key key key key key key key key key none11"; /* 18 */
+    "none4 none4 none4 Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr none5"; /* 18 */
     justify-content: start;
 }
 /* So the text aligns with all container */
@@ -72,6 +71,3 @@ body{
     padding: 0;
 }
 
-.key{
-    grid-area: key;
-}
