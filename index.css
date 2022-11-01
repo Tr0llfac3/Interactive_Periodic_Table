@@ -4,14 +4,8 @@ body{
     font-family: Roboto,arial,sans-serif;
 }
 /* Gives the types of elements their color */
-.reactiveNonMetal{
-    background-color: #2a4165;
-}
-.nobleGas{
-    background-color: #623842;
-}
 .alkaliMetals{
-    background-color: #244d57
+    background-color: #244d57;
 }
 .alkalineEarthMetals{
     background-color: #622e39;
@@ -24,6 +18,12 @@ body{
 }
 .metalloids{
     background-color: #523e1b;
+}
+.reactiveNonMetal{
+    background-color: #2a4165;
+}
+.nobleGas{
+    background-color: #623842;
 }
 .lanthanides{
     background-color: #004a77;
@@ -38,6 +38,8 @@ body{
 
 /* Container for the periodic table itself */
 #perioticTable{
+    width:100%;
+    padding: 0;
     display: inline-grid;
     /* Arranges The elements to the shape of a periodic table */
     grid-template-areas: 
@@ -71,3 +73,21 @@ body{
     padding: 0;
 }
 
+#key{
+    margin-left: 10%;
+}
+
+#topLeftContainer{
+    width: 50vw;
+}
+
+/* Makes a block with the specified colour for each key */
+.block{
+    display: inline-block;
+    border: 2px solid;
+    padding: 4px;
+}
+
+#topLeftContainer{
+    border: 2px solid;
+}
