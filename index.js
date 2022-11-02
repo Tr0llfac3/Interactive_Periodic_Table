@@ -170,26 +170,3 @@ $.each(elementList, function(i,v){
 
 })
 
-let keyList={
-    "Alkali Metals":{name: "Alkali Metals", type: "alkaliMetals", id: "key1"},
-    "Alkaline Earth Metals":{name: "Alkaline Earth Metals", type: "alkalineEarthMetals", id: "key2"},
-    "Transition Metals":{name: "Transition Metals", type: "transitionMetals",id: "key3"},
-    "Post-Transition Metals":{name: "Post-Transition Metals", type: "postTransitionMetals",id: "key4"},
-    "Metalloids":{name: "Metalloids", types: "metalloids",id: "key5"},
-    "Reactive Nonmetals":{name: "Reactive Nonmetals", type: "reactiveNonMetal",id: "key6"},
-    "Noble Gases":{name: "Noble Gases", type: "nobleGas",id: "key7"},
-    "Lanthanides":{name: "Lanthanides", type: "lanthanides",id: "key8"},
-    "Actinides":{name: "Antinides", type: "actinides",id: "key9"},
-    "Unknown Properties":{name: "Unknown Properties", type: "unknownProperties",id: "key10"}
-}
-
-$.each(keyList, function(i,v){
-    console.log(v);
-    let currentKey = v;
-    let keyDiv = `<div style="grid-area: ${currentKey.id}"><span class=" ${currentKey.type} block"></span> ${current.name}</div>`
-    $("#perioticTable").append(keyDiv);
-})
-
-//  var myKey = $('<div class="key">some content</div>');
-//  $("#perioticTable").append(myKey);
-
