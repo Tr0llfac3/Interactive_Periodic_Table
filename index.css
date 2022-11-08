@@ -74,6 +74,7 @@ body{
 
 /* Sets up every element cell */
 .elementBox{
+    user-select: none;
     border: 1px solid;
     max-width: 60px;
     max-height: 60px;
@@ -84,6 +85,7 @@ body{
 
 /* Implements the expand on hover thing */
 .elementBox:hover{
+    cursor:pointer;
     transform: scale(1.5);
     box-shadow: 1px 1px 10px white;
     border-radius: px;
@@ -111,8 +113,10 @@ body{
     border-left: 2px solid black;
     grid-area: R;
     display: block;
-    width: 50vw;
+    /*width: 50vw;*/
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 #bottomLeftContainer{
     grid-area: BL;
@@ -128,4 +132,16 @@ body{
     border-radius: 50%;
     padding: 4px;
 }
+iframe{
+    width: 100%;
+    height: 100%;
+}
 
+#informationSection{
+    flex-grow: 9;
+}
+
+#informationTitle{
+    flex-grow: 0;
+    flex-basis: 1em;
+}
