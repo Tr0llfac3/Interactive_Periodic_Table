@@ -165,12 +165,12 @@ $.each(elementList, function(i,v){
     console.log(v);
     let currentElem = v;
     let elemDiv = `<div class="elementBox ${currentElem.type.class}" style="grid-area: ${currentElem.abbrev}" data-name="${currentElem.name}"><p class="elemNum">${currentElem.num}</p>
-    <h1 class="elemAbbr">${currentElem.abbrev}</h1></div>`;
+    <h1 class="elemAbbr">${currentElem.abbrev}</h1><h5 class="elemName">${currentElem.name}</h5></div>`;
     $("#perioticTable").append(elemDiv);
 
 })
 
-$('.elementBox').click(function(e) {
-    $('iframe').attr("src", "https://en.wikipedia.org/wiki/" + $(this).attr('data-name'));
+$('.elementBox').click(async function(e) {
+   
 });
 
