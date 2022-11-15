@@ -164,13 +164,41 @@ let elementList = {
 $.each(elementList, function(i,v){
     console.log(v);
     let currentElem = v;
-    let elemDiv = `<div class="elementBox ${currentElem.type.class}" style="grid-area: ${currentElem.abbrev}" data-name="${currentElem.name}"><p class="elemNum">${currentElem.num}</p>
+    let elemDiv = `<div class="elementBox ${currentElem.type.class}" style="grid-area: ${currentElem.abbrev}" data-name="${currentElem.name}" data-bs-toggle"modal" data-target="#${currentElem.name}"><p class="elemNum">${currentElem.num}</p>
     <h1 class="elemAbbr">${currentElem.abbrev}</h1><h5 class="elemName">${currentElem.name}</h5></div>`;
     $("#perioticTable").append(elemDiv);
 
 })
 
-$('.elementBox').click(async function(e) {
-   
+// When user clicks element it will show the modal with the information for that said element
+$('.elementBox').click(function(e) {
+   showModal($(this));
 });
+function showModal(e){
+    const $elementName = $(e).attr('data-name');
+    // Displays the element name in the console. (Just to make sure that it0 works in pulling the name of each element)
+    console.log($elementName);
 
+    const $modal = 
+    `<div class="modal fade" id="${$elementName}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          What to do:
+          Make each element its own modal button 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>`
+
+    $('body').append($modal);
+}
