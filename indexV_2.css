@@ -2,6 +2,9 @@
 
 html{
     background-image:url(images/backImage.png);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 body{
@@ -98,7 +101,8 @@ body{
 }
 
 #key{
-    margin-left: 10%;
+    font-size: 1.5em;
+    margin-left: 15%;
 }
 
 #mainContainer{
@@ -113,6 +117,8 @@ body{
     border: 1px solid white;
     border-radius: 50%;
     padding: 4px;
+    width: 1em;
+    height: 1em;
 }
 iframe{
     width: 100%;
@@ -126,4 +132,11 @@ iframe{
 #informationTitle{
     flex-grow: 0;
     flex-basis: 1em;
+}
+
+#developerInfo{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 75px;
+    margin-left: 7px;
 }

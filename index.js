@@ -178,7 +178,7 @@ function showModal(e){
     const $elementName = $(e).attr('data-name');
     // Displays the element name in the console. (Just to make sure that it0 works in pulling the name of each element)
     console.log($elementName);
-
+/*
     const $modal = 
     `<div class="modal fade" id="${$elementName}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -199,6 +199,22 @@ function showModal(e){
       </div>
     </div>
   </div>`
+*/
 
-    $('body').append($modal);
+//set the modal title to element name
+//set the body to a loading image (css)
+//call a function to hit the api and change the content of the modal body to the response
+$('.modal-title').html(`<h1>${$elementName}</h1>`)
+    $('.modal-body').html(`<h2>LOADING PLEASE WAIT...</h2>`)
+    $('.modal').on('hidden.bs.modal', function() {
+        $(this).find('.modal-body').html('');
+    });
+    $('#exampleModalLong').modal('show');
+    
+
+    let file = "https://api.wikimedia.org/core/v1/wikipedia/en/page/" +  $elementName + "/html" //contsruct the api link
+    fetch (file)
+        .then(response => response.text())
+        .then(text => $('.modal-body').html(text));
 }
+
